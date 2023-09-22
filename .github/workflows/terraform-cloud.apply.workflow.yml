@@ -8,7 +8,7 @@ on:
     - cron: '* 0 * * *'
 
 env:
-  TF_CLOUD_ORGANIZATION: "lmhd"
+  TF_CLOUD_ORGANIZATION: "fancycorp"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
 
 jobs:
@@ -19,13 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         workspace:
-          - aws-sso
-          - better-uptime
-          - bootstrap-aws_creds-lmhd_root
-          - dns
-          - tfc-jwt-test
-          - vault
-          - vault-okta
+          - workspace-ages
     runs-on: ubuntu-latest
     steps:
       - uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.2

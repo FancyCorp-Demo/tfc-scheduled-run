@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "lmhd"
+    organization = "fancycorp"
 
     workspaces {
       name = "tfc-scheduled-run"
@@ -15,7 +15,7 @@ terraform {
 }
 
 provider "tfe" {
-  organization = "lmhd"
+  organization = "fancycorp"
 }
 
 resource "tfe_team" "gh-actions-autoplan" {
@@ -24,13 +24,7 @@ resource "tfe_team" "gh-actions-autoplan" {
 
 locals {
   workspaces = toset([
-    "vault",
-    "vault-okta",
-    "tfc-jwt-test",
-    "aws-sso",
-    "better-uptime",
-    "dns",
-    "bootstrap-aws_creds-lmhd_root",
+    "workspace-ages",
   ])
 }
 
