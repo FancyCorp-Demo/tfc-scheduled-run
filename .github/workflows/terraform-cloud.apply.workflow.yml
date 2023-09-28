@@ -1,5 +1,4 @@
 # Based on https://github.com/hashicorp/tfc-workflows-github/blob/main/workflows/terraform-cloud.apply-run.workflow.yml
----
 name: Terraform Cloud Apply Run
 
 on:
